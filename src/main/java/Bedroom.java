@@ -6,6 +6,7 @@ public class Bedroom {
     private int capacity;
     private String roomType;
     private ArrayList<Guest> guests;
+    private int rate;
 
     public Bedroom(int number, int capacity, String roomType) {
         this.number = number;
@@ -36,6 +37,18 @@ public class Bedroom {
 
     public void removeGuest(Guest oldGuest) {
         this.guests.remove(oldGuest);
+    }
+
+    public boolean guestInRoom(Guest guest) {
+        return guests.contains(guest);
+    }
+
+    public void setRate(int newRate) {
+        this.rate = newRate;
+    }
+
+    public int getRate() {
+        return this.rate;
     }
 
 }

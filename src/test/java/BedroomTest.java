@@ -11,6 +11,7 @@ public class BedroomTest {
     @Before
     public void setup() {
         guestRoom1 = new Bedroom(1, 2, "Single");
+        guestRoom1.setRate(100);
         guest = new Guest("Bob");
     }
 
@@ -20,6 +21,7 @@ public class BedroomTest {
         assertEquals(2, guestRoom1.getCapacity());
         assertEquals("Single", guestRoom1.getRoomType());
         assertEquals(0, guestRoom1.getGuestCount());
+        assertEquals(100, guestRoom1.getRate());
     }
 
     @Test

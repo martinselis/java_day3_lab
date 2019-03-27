@@ -32,4 +32,8 @@ public class ConferenceRoom {
     public void removeGuest(Guest oldGuest) {
         this.guests.remove(oldGuest);
     }
+
+    public boolean guestInRoom(Guest guest) {
+        return guests.contains(guest);
+    }
 }
